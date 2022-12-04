@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="jquery.js" defer></script>
+        <script src="script.js" defer></script>
+        <title>Tims Abstrakte Kunstverk</title>
+    </head>
+    <body>
+        <div class="mainContainer">
+            <h2>Tim (5)</h1>
+            <p>
+                Tim er en fem år gammel gutt fra Krysset barnehage, som ligger
+                i Brosnalia ut på landet. Han liker seg best på tegnerommet, og 
+                har hengt opp mange av tegningene sine på vegger her og der i barnehagen.
+                Nylig fikk tegnerommet en datamaskin med diverse programvare knyttet til
+                tegning, noe som interesserte Tim veldig. Han har nå utforsket to måter å 
+                lage den samme tegningen på, ene som en bildefil, og den andre tegnet
+                direkte inn i nettleseren. Disse er animerte ved at solstrålene spinner, 
+                og hvis du trykker på solen spinner de fortere. Trykker du på landskapet endrer
+                du tiden til natt eller dag.
+            </p>
+            <div class="artFlexbox">
+
+                <div class="artPiece1">
+                    <p>Landskap (SVG)</p>
+                    <svg id="svgArt" class="art" viewBox="0 0 200 200">
+                        <title>Landskap (SVG)</title>
+                        <desc>Et landskap med en spinnende sol der man kan trykke på landskapet for å endre til natt, eller hvis man trykker på solen roterer den fortere</desc>
+                        <!-- Himmel-->
+                        <rect id="svgSky" width="200" height="200"
+                        style="fill: rgb(67, 203, 249);"
+                        />
+                        <!-- Solstråler-->
+                        <polyline 
+                        id="svgSunRays"
+                        points="0,0 
+                        90,90 0,0 112,60 0,0 120,30 0,0 120,10 
+                        0,0 60,112 0,0 30,120 0,0 10,120 0,0
+                        
+                        -90,-90 0,0 -112,-60 0,0 -120,-30 0,0 -120,-10 
+                        0,0 -60,-112 0,0 -30,-120 0,0 -10,-120 0,0
+                        
+                        90,-90 0,0 112,-60 0,0 120,-30 0,0 120,-10
+                        0,0 60,-112 0,0 30,-120 0,0 10,-120 0,0
+                        
+                        -90,90 0,0 112,-60 0,0 -120,30, 0,0 -120,10
+                        0,0 -60,112 0,0 -30,120 0,0 -10,120 0,0
+                        "
+                        />
+                        
+                        <!-- Sol -->
+                        <circle id="svgSun" r="75" stroke="yellow" stroke-width="5" fill="yellow" onclick="makeSunSpinFaster()"/>
+
+                        <circle id="svgMoon" cx="130" cy="40" r="35" fill="#FEFCD7" />
+
+                        <!-- Gress-->
+                        <polygon id="svgGrass"
+                        points="200,200 0,200 0,150 100,150 130,140 200,140"
+                        style="fill: green"
+                        />
+                        Denne nettleseren støtter ikke SVG skrevet direkte inn i HTML-koden :(
+                    </svg>
+                </div>
+
+                <div class="artPiece2">
+                    <p>Landskap (Canvas)</p>
+                    <canvas id="canvasArt" class="art" width="200" height="200">
+                        <title>Landskap (SVG)</title>
+                        <desc>Et landskap med en spinnende sol som kan trykkes på for å endre tiden til natt</desc>
+                        Denne nettleseren støtter ikke HTML Canvas :(
+                    </canvas>
+                </div>
+            </div>
+
+            <button class="docButton">Vis dokumentasjon</button>
+            <div class="documentation">
+                <p>
+                    Til denne nettsiden har Flexbox blitt benyttet for å få kunstverkene til å sitte ved 
+                    siden av hverandre, med jevnt mellomrom mellom de. Selve nettsiden er sentrert ved å endre på
+                    venstre og høyre marg. Dette fungerer best for dataskjermer, men for mobilskjermer blir det dårlig
+                    bruk av skjermen. Dette ble fikset ved hjelp av media-queries, da det reduserer endringene i margene fra 
+                    opp til 30% av skjermbredden ned til 5% basert på maksbredden til skjermen.
+                    Samtidig endrers plasseringen av kunstverkene i flex-boksen fra radrepresentasjon til kolonnerepresentasjon på små skjermer.
+                </p>
+                <p>
+                    HTML Canvas og SVG har begge blitt brukt til å produsere det samme kunstverket, mest for å 
+                    lære fordeler og ulemper med begge metodene. Begge typene har blitt implementert med en animasjon av at
+                    solstrålene roterer rundt solen. Interaktivitet har også blitt implementert ved at man kan trykke på solen
+                    slik at de roterer fortere, samtidig som at det blir natt hvis man trykke utenfor solen. Man kan gjøre det tilbake 
+                    til dag ved å trykke på kunstverket, til og med der solen tidligere var.
+                    <br>
+                    SVG-kunstverket ble laget ved å bruke innebygde figurer som gjorde det veldig enkelt å manuelt lage et 
+                    slik kunstverk med lav kompleksitet. Animering i SVG gikk også bra da det kokte ned til å 
+                    bruke <i>CSS keyframes</i> og <i>animation</i> for å få solstrålene til å rotere rundt solen.
+                    Alternativt kunne det ha blitt brukt 'animation'-tags på solstrålene for å rotere, i stedet for CSS.
+                    SVG støtter også <i>onclick</i> slik at det ble veldig enkelt å fikse interaktivitet på bestemte komponenter.
+                    Et alternativ for dette nevnes lenger nede knyttet til jQuery.
+                    <br>
+                    HTML canvas og api-et i Javascript er mer som tegning på frihånd, men du må spesifisere via
+                    Javascript hvor og hvordan man skal tegne. På et såpass enkelt kunstverk som dette endte det opp med 
+                    å fylle noen geometriske figurer, bevege seg til neste startpunkt og tegne til neste sluttpunkt.
+                    Solstrålene er det mest kompliserte "objektet" i kunstverkene, da det er et stort sett med koordinater.
+                    Implementasjonen av strålene føltes bedre ut i canvas med tanke på ryddig kode, da koordinatene kunne plasseres
+                    i en array og enkelt iterert gjennom.
+                    Animering var mye vanskeligere sammenlignet med SVG-versjonen, da det endte opp med tilstandslagring
+                    av canvas-konteksten når rotasjonen på solestrålene skulle beregnes.
+                    Interaktiviteten er det samme som i SVG-kunstverket, men gyldig område ble beregnet manuelt i Javascript
+                    ved hjelp av en <i>EventListener</i>, i stedet for å bare legge til en <i>onclick</i>
+
+                </p>
+                <p>
+                    jQuery har blitt brukt til å hente spesifikke DOM-elementer på nettsiden, med solen på SVG-en som unntak. Der
+                    ble <i>onclick</i>-attributten brukt bare for å bruke den. Alternativt kunne <code>$("#svgSun")</code> blitt brukt
+                    for å hente solen. Ellers er det bare EventListener til canvas, og <code>drawCanvas</code>
+                    som ikke har noe jQuery.
+                </p>
+                <p>
+                    Cross-Browser Testing har blitt utført på Google Chrome, Microsoft Edge, og Mozilla Firefox. På disse har det blitt 
+                    testet om javascripten (inkludert canvas), SVG-en, og responsiviteten på nettsiden funker som de skal, noe 
+                    som tilsynelatende stemmer.
+                </p>
+                <p>
+                    Nyttige kilder brukt gjennom prosjektet:
+                    <ul>
+                        <li>
+                            <a href="https://learn.jquery.com/about-jquery/"> jQuery Learning Center </a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3schools.com/graphics/canvas_intro.asp">HTML Canvas, w3schools</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Canvas API animations</a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@lavrton/hit-region-detection-for-html5-canvas-and-how-to-listen-to-click-events-on-canvas-shapes-815034d7e9f8">
+                                Click-events på Canvas
+                            </a>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
