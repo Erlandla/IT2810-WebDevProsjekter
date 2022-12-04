@@ -1,0 +1,100 @@
+body {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+.art {
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgb(45, 40, 40);
+}
+
+.artFlexbox {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 5vh;
+    font-size: 12pt;
+}
+
+@keyframes rotates {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#svgSunRays {
+    animation-name: rotates;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    stroke: yellow;
+    stroke-width: 4px;
+}
+
+#svgMoon {
+    display: none;
+}
+
+.docButton {
+    background-color: rgb(172, 161, 161);
+    border: none;
+    color: white;
+    font-size: 16pt;
+    padding: 1vh;
+}
+
+.docButton:hover {
+    box-shadow: 1px 2px black;
+}
+
+.documentation {
+    display: none;
+    text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 2vh;
+        font-size: 12pt;
+    }
+
+    .artFlexbox {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    body {
+        margin-left: 20vw;
+        margin-right: 20vw;
+        margin-top: 2vh;
+        font-size: 16pt;
+    }
+}
+
+@media screen and (max-width: 463px) {
+    body {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 2vh;
+        font-size: 12pt;
+    }
+
+    .artFlexbox {
+        flex-flow: column wrap;
+    }
+}
