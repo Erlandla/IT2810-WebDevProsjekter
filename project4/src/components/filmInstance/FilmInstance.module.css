@@ -1,0 +1,49 @@
+.flexbox {
+    display: flex;
+    border-style: solid;
+    border-color: #7F8994;
+    border-width: 1px 0px 0px 0px;
+    margin-top: 20px;
+    padding-top: 12px;
+}
+
+.filmInstanceContainer{
+    cursor: pointer;
+}
+
+.flexbox2 {
+    display: flex;
+}
+
+.title {
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    background-color: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
+    margin-right: 15px;
+}
+
+.title:hover {
+    color: #40BCF4;
+}
+
+.releaseYear {
+    margin-right: 15px;
+}
+
+.rating {
+    margin-right: 15px;
+}
+
+.movieTitleWrapper {
+    background-color: inherit;
+    border: none;
+    margin: 0; 
+    padding: 0;
+}

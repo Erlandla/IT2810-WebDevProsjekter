@@ -1,0 +1,12 @@
+.yourWatchList {
+    width: 23%;
+    text-align: center;
+    color: #99AABB;
+    font-size: 2vw;
+    letter-spacing: 1.3px;
+    padding-bottom: 5px;
+    margin: min(8vh, 8vw) 0vh 1vh 0vh;
+    border-style: solid;
+    border-color: #99AABB;
+    border-width: 0px 0px 1.5px 0px;
+}

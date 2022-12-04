@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    margin: 10px auto 20px auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.filterByText{ 
+    font-size: max(1.3vw, 9px);
+    margin-top: 4px;
+}

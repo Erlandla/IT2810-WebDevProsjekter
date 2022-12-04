@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filmInstance testing checks if matches snapshot 1`] = `
+<article
+  className="filmInstanceContainer"
+>
+  <div
+    className="flexbox"
+  >
+    <div
+      className="title"
+      data-testid="filmTitle"
+    >
+      TestFilm
+    </div>
+    <div
+      className="releaseYear"
+      data-testid="filmRelease"
+    >
+       
+      1999
+       
+    </div>
+    <div
+      className="runtime"
+      data-testid="filmRuntime"
+    >
+      103
+       min
+    </div>
+  </div>
+  <div
+    className="flexbox2"
+  >
+    <div
+      className="rating"
+      data-testid="filmRating"
+    >
+      9.2
+      /10
+    </div>
+    <div
+      className="genres"
+      data-testid="filmGenre"
+    >
+       
+      Drama
+       
+    </div>
+  </div>
+</article>
+`;

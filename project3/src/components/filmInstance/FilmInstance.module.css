@@ -1,0 +1,33 @@
+.flexbox {
+    display: flex;
+    border-style: solid;
+    border-color: #40312c;
+    border-width: 1px 0px 0px 0px;
+    margin-top: 20px;
+    padding-top: 12px;
+}
+
+.filmInstanceContainer{
+    cursor: pointer;
+}
+
+.flexbox2 {
+    display: flex;
+}
+
+
+.title {
+    color: white;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.releaseYear {
+    font-weight: 1;
+    margin-right: 15px;
+}
+
+
+.rating {
+    margin-right: 15px;
+}

@@ -1,0 +1,57 @@
+.button {
+    color: #99AABB;
+    font-size: max(1vw, 12px);
+    background-color: #1A1F25;
+    border: 1px solid #333232;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #cbd5de;
+}
+
+.button img {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.dropdown {
+    position: relative;
+
+}
+
+.dropdownMenu {
+    width: 80%;
+    font-size: max(1vw, 8px);
+    margin-left: 1vw;
+    position: relative;
+    background-color: #8899aa;
+    padding: .25rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.dropdownMenuClosed {
+    width: 80%;
+    font-size: max(1vw, 8px);
+    margin-left: 1vw;
+    position: relative;
+    background-color: #8899aa;
+    padding: .25rem;
+    border-radius: .25rem;
+    display: none;
+}
+
+.dropdownItem {
+    color: #1A1F25;
+    font-size: max(0.9vw, 9px);
+    margin-top: 0.5vh;
+}
+
+.dropdownItem:hover {
+    color: white;
+    background-color: #617086;
+    font-weight: 500;
+}

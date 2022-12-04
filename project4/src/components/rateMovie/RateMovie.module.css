@@ -1,0 +1,40 @@
+.rateMovieText {
+    padding-top: 1vh;
+    margin: 0;
+}
+
+.ratingContainer {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1vh;
+}
+
+.buttonStyle {
+    background: none;
+    color: #cbd5de;
+    /* border-color: #716A6A;
+    border-style: groove; */
+    border: 1px solid #7F8994;
+    border-radius: 5px;
+    box-shadow: none;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.buttonStyle:hover {
+    cursor: pointer;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .rateMovieText {
+        display: none;
+    }
+    .ratingContainer {
+        margin-top: 7px;
+    }
+    .buttonStyle {
+        margin: 5px;
+        padding: 5px;
+    }
+  }

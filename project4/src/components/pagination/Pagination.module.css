@@ -1,0 +1,42 @@
+.infoTexts {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    font-size: 16pt;
+}
+
+.buttonStyle {
+    background: none;
+    cursor: pointer;
+    color: #cbd5de;
+    /* border-color: #716A6A;
+    border-style: groove; */
+    border: 1px solid #7F8994;
+    box-shadow: none;
+    padding: 1vh 1vw 1vh 1vw
+}
+
+.buttonStyle:hover {
+    color: white;
+}
+
+.buttonStyle:disabled {
+    cursor: default;
+    color: #666666;
+    border-color: #333232;
+}
+
+.currentPageText {
+    padding: 0 10px 0 10px;
+    cursor: default;
+}
+
+.title {
+    color: white;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.noBullets {
+    list-style-type: none;
+}

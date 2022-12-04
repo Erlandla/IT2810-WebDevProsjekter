@@ -1,0 +1,25 @@
+/* 
+Color scheme:
+14181C - black, used for navbar
+1A1F25 - dark blue, body background color
+2C3440 - dark-ish blue, searchBar etc...
+99AABB - light blue, used for text
+cbd5de - lighter blue, used for hovering text
+333232 - dark grey, used for button borders
+*/
+
+body {
+    background-color: #1A1F25;
+    color: #99AAC1;
+}
+
+.centeredDiv {
+    width: 80%;
+    margin: 0px auto 2%;
+}
+
+@media only screen and (max-width: 600px) {
+    .centeredDiv {
+        width: 96%;
+    }
+  }

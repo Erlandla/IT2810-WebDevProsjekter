@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filmInstance testing checks if matches snapshot 1`] = `
+<article
+  aria-label="Clickable Film instance of the movie TestFilm"
+  className="filmInstanceContainer"
+>
+  <div
+    className="flexbox"
+  >
+    <button
+      className="movieTitleWrapper"
+    >
+      <h2
+        className="title"
+        data-cy="filmTitle"
+        data-testid="filmTitle"
+      >
+        TestFilm
+         
+      </h2>
+    </button>
+    <div
+      className="releaseYear"
+      data-cy="filmRelease"
+      data-testid="filmRelease"
+    >
+       
+      1999
+       
+    </div>
+    <div
+      className="runtime"
+      data-cy="filmRuntime"
+      data-testid="filmRuntime"
+    >
+      103
+       min
+    </div>
+  </div>
+  <div
+    className="flexbox2"
+  >
+    <div
+      className="rating"
+      data-cy="filmRating"
+      data-testid="filmRating"
+    >
+      9.2
+      /10
+    </div>
+    <div
+      className="genres"
+      data-cy="filmGenre"
+      data-testid="filmGenre"
+    >
+       
+      Drama
+       
+    </div>
+  </div>
+</article>
+`;
